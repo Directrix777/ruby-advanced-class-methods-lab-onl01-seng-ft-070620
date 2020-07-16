@@ -24,7 +24,6 @@ class Song
   end
 
   def self.find_by_name(name)
-    binding.pry
     @@all.each do |song|
       return song if song.name = name
     end
