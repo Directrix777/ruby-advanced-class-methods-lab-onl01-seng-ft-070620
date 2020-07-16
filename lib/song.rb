@@ -11,6 +11,11 @@ class Song
     @@all
   end
 
+  def self.new_by_name(name)
+    self.new.save
+    @@all[-1].name = name 
+  end
+
   def save
     self.class.all << self
   end
