@@ -55,7 +55,7 @@ class Song
     instance
   end
 
-  def self.new_from_filename(filename)
+  def self.create_from_filename(filename)
     words = filename.split(" - ")
     words[1] = words[1].split(".")[0]
     instance = self.create_by_name(words[1])
