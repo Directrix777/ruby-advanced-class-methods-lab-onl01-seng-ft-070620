@@ -33,6 +33,10 @@ class Song
     return create_by_name(name)
   end
 
+  def self.alphabetical
+    @@all.sort
+  end
+
   def save
     self.class.all << self
   end
