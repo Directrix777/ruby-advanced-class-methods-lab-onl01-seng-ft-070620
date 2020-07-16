@@ -48,8 +48,7 @@ class Song
   end
 
   def self.new_from_filename(filename)
-    words = filename.split(" ")
-    words.delete("-")
+    words = filename.split(" - ")
     words[1] = words[1].split(".")[0]
     instance = self.new_by_name(words[1])
     instance.artist_name = words[0]
