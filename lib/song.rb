@@ -35,10 +35,15 @@ class Song
 
   def self.alphabetical
     names = []
+    alpha = []
     @@all.each do |song|
       names << song.name
     end
-    names.sort
+    names = names.sort
+    names.each do |name|
+      alpha << self.find_by_name(name)
+    end
+    alpha
   end
 
   def save
