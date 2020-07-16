@@ -21,6 +21,7 @@ class Song
     self.new.save
     @@all[-1].name = name
     @@all[-1]
+  end
 
   def save
     self.class.all << self
