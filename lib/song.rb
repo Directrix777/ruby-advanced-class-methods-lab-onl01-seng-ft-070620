@@ -52,7 +52,7 @@ class Song
     words.delete("-")
     words[1] = words[1].split(".")[0]
     instance = self.new_by_name(words[1])
-    instance.artist = words[0]
+    instance.artist_name = words[0]
     instance
   end
 
