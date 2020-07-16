@@ -28,9 +28,9 @@ class Song
     return nil
   end
 
-  def self.find_or_create_by_name
-    return self.find_by_name unless !self.find_by_name
-    return create_by_name
+  def self.find_or_create_by_name(name)
+    return self.find_by_name(name) unless !self.find_by_name(name)
+    return create_by_name(name)
   end
 
   def save
