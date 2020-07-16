@@ -6,7 +6,6 @@ class Song
     self.name = name
     self.artist_name = artist_name
     self.save
-
   end
 
   def self.all
