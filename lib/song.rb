@@ -12,8 +12,9 @@ class Song
   end
 
   def self.new_by_name(name)
-    self.create.name = name
-    @@all[-1]
+    instance = self.new
+    instance.name = name
+    instance
   end
 
   def self.create_by_name(name)
@@ -46,8 +47,14 @@ class Song
     alpha
   end
 
+  def new_from_filename(filename)
+    words = filename.split(" ")
+    words.delete("-")
+    words[1] = words[1].split(".")[0]
+    self.
+  end
+
   def save
     self.class.all << self
   end
-
 end
