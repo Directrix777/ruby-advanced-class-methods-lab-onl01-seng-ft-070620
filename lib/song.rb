@@ -18,8 +18,7 @@ class Song
   end
 
   def self.create_by_name(name)
-    self.new.save
-    @@all[-1].name = name
+    self.create.name = name
     @@all[-1]
   end
 
