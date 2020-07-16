@@ -47,7 +47,7 @@ class Song
     alpha
   end
 
-  def new_from_filename(filename)
+  def self.new_from_filename(filename)
     words = filename.split(" ")
     words.delete("-")
     words[1] = words[1].split(".")[0]
